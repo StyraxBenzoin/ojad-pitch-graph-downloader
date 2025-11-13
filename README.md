@@ -71,26 +71,15 @@ The script will:
 All PNG files are placed in the folder defined by `OUTPUT_DIR`.  
 If a file with the same name already exists, the script skips regeneration.
 
-## 🐞 Troubleshooting  
-
-- **`NoSuchElementError`** – OJAD may show a loading overlay. The script now waits for it to disappear; if the problem persists, try running with `HEADLESS = False` to watch the page.  
-- **Blank images** – increase `CROP_TOP_PIXELS`/`CROP_BOTTOM_PIXELS` or add a short `sleep` after the CSS injection.  
-- **Unicode errors** – ensure your CSV is saved as UTF‑8 (or UTF‑8‑BOM).  
-
-## 📜 License  
-
-This project is released under the MIT License – feel free to fork, modify, and use it in your own tools.
-
 ---  
 
 **Enjoy generating pitch‑accent graphs!**
 
 
-
-
-
 ---
 ## How can I add these to Anki?
+
+There's probably better ways to do this like making an Anki plugin, but this was a one-off need for me. Here is rougly what I did:
 
 ### 1. Add a column that contains an HTML `<img>` tag  
 
@@ -187,3 +176,5 @@ Now each card’s `PitchGraph` field will render the image:
 ```
 
 Because the image file lives in `collection.media`, Anki resolves the relative path automatically and displays the pitch‑accent graph on the card.
+
+All that's left to do is add the {{PitchGraph}} field to your Anki template however you like.
