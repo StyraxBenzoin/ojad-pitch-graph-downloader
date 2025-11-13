@@ -2,7 +2,7 @@
 
 A Python script that reads Japanese sentences from a CSV file, sends each sentence to the **OJAD phrasing service** (the online “Japanese‑Open‑Dictionary of Accents & Dialects”), captures the generated pitch‑accent graph as a PNG image, and saves the image with a user‑defined filename. 
 
-
+0019-JB.png
 
 🔗 **OJAD phrasing service:** https://www.gavo.t.u-tokyo.ac.jp/ojad/phrasing   (official site for Japanese pitch‑accent analysis).
 
