@@ -2,16 +2,18 @@
 
 A Python script that reads Japanese sentences from a CSV file, sends each sentence to the **OJAD phrasing service** (the online “Japanese‑Open‑Dictionary of Accents & Dialects”), captures the generated pitch‑accent graph as a PNG image, and saves the image with a user‑defined filename. 
 
-![Japanese pitch‑accent graph](images/0019-JB.png)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/StyraxBenzoin/ojad-pitch-graph-downloader/refs/heads/main/images/0019-JB.png">
+</p>
 
 🔗 **OJAD phrasing service:** https://www.gavo.t.u-tokyo.ac.jp/ojad/phrasing   (official site for Japanese pitch‑accent analysis).
 
-## ✨ Features
+## Features
 - **Fully configurable**: CSV path, output folder, head‑less mode, crop margins, and the column numbers for filename & text are all set at the top of the script.  
 - **Single WebDriver instance** – fast processing of many rows.  
 - **No personal data is sent** beyond the text you provide; the script only contacts OJAD.  
 
-## 📦 Installation  
+## Installation  
 
 ```bash
 # Clone the repo
@@ -34,7 +36,7 @@ beautifulsoup4
 pillow
 ```
 
-## 🛠️ Configuration  
+## Configuration  
 
 Open `download_pitch_graphs.py` and edit the **settings block** at the top:
 
@@ -53,7 +55,7 @@ TEXT_COL          = 1   # column that holds the Japanese phrase
 *Columns are **0‑based**:* the first column is `0`, the second is `1`, etc.  
 Adjust `FILENAME_COL` and `TEXT_COL` to match the layout of your CSV file.
 
-## ▶️ Running the script  
+## Running the script  
 
 ```bash
 python download_pitch_graphs.py
@@ -66,7 +68,7 @@ The script will:
 3. Capture the generated pitch‑accent graph, crop it, and save it as  
    `OUTPUT_DIR/<filename>.png`.  
 
-## 📂 Output  
+## Output  
 
 All PNG files are placed in the folder defined by `OUTPUT_DIR`.  
 If a file with the same name already exists, the script skips regeneration.
